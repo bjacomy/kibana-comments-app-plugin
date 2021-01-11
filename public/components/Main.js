@@ -27,14 +27,11 @@ import ListComments from '../components/ListComments'
 
 const Main = (props) => {
 
-
-
-  return(
+  return(    
     <Fragment>
     <EuiPage>
       <EuiPageBody>
         <EuiPageHeader>
-
           <EuiHeader style={{width: "100%"}}>
             <EuiHeaderSection>
               <EuiHeaderSectionItem border="right" style={{width: "5%"}}>
@@ -44,37 +41,25 @@ const Main = (props) => {
                   </EuiFlexItem>
                 </EuiFlexGroup>
               </EuiHeaderSectionItem>
-
               <EuiHeaderSectionItem>
                 <EuiTitle style={{paddingLeft: "20px", paddingTop: "20px"}}>
                   <h2>Kibana Comments</h2>
                 </EuiTitle>
-
                 <EuiText style={{paddingLeft: "20px"}}>
                   <p>A plugin to add comments to your Kibana dashboards</p>
                 </EuiText>
-
               </EuiHeaderSectionItem>
-
             </EuiHeaderSection>
-
-
           </EuiHeader>
         </EuiPageHeader>
-
         <EuiSpacer />
-
         <EuiPageContent>
-
-
           <EuiPageContentBody>
             <ListComments />
           </EuiPageContentBody>
         </EuiPageContent>
       </EuiPageBody>
-
       <EuiSpacer />
-
    </EuiPage>
    </Fragment>
   );
