@@ -1,5 +1,6 @@
 {
   "extends": "../../tsconfig.json",
+  "allowJs": true,
   "compilerOptions": {
     "outDir": "./target",
     "skipLibCheck": true
@@ -8,6 +9,7 @@
     "index.ts",
     "common/**/*.ts",
     "public/**/*.ts",
+    "public/**/*.js",
     "public/**/*.tsx",
     "server/**/*.ts",
     "../../typings/**/*"

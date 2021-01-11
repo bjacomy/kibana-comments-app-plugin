@@ -56,6 +56,7 @@ export default class ListComments extends Component {
 
     this.closeModalAndReloadComments = this.closeModalAndReloadComments.bind(this);
     this.setState({ isModalVisible: false });
+    this.closeModal();
   }
 
   closeModal() {
