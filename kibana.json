@@ -1,8 +1,9 @@
 {
   "id": "kibanaCommentsApp",
-  "version": "7.10.0",
+  "version": "7.10.2",
   "server": true,
   "ui": true,
   "requiredPlugins": ["navigation"],
-  "optionalPlugins": []
+  "optionalPlugins": [],
+  "configPath": "kibana-comment-app"
 }

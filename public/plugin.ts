@@ -1,15 +1,19 @@
 import { i18n } from '@kbn/i18n';
-import { AppMountParameters, CoreSetup, CoreStart, Plugin } from '../../../src/core/public';
+import { AppMountParameters, CoreSetup, CoreStart, Plugin, PluginInitializerContext } from '../../../src/core/public';
 import {
   KibanaCommentsAppPluginSetup,
   KibanaCommentsAppPluginStart,
   AppPluginStartDependencies,
 } from './types';
 import { PLUGIN_NAME } from '../common';
-
+interface ClientConfigType {
+  enabled: boolean;
+}
 export class KibanaCommentsAppPlugin
   implements Plugin<KibanaCommentsAppPluginSetup, KibanaCommentsAppPluginStart> {
+    constructor(private readonly initializerContext: PluginInitializerContext) {}
   public setup(core: CoreSetup): KibanaCommentsAppPluginSetup {
+    const config = this.initializerContext.config.get<ClientConfigType>();
     // Register an application into the side navigation menu
     core.application.register({
       id: 'kibanaCommentsApp',
